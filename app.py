@@ -2,8 +2,6 @@ import os
 os.environ["HADOOP_OPTS"] = "-Djava.library.path="
 os.environ["HADOOP_HOME"] = "C:/hadoop"
 
-from pyspark.sql import SparkSession
-
 import streamlit as st
 import pandas as pd
 import requests
