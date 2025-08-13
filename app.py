@@ -39,8 +39,8 @@ def assign_cluster(location_id, centers):
     dists = np.abs(centers.flatten() - location_id)
     return int(np.argmin(dists))
 
-pu_centers = np.load('pu_kmeans_centers.npy')
-do_centers = np.load('do_kmeans_centers.npy')
+pu_centers = np.load('trained_models/pu_kmeans_centers.npy')
+do_centers = np.load('trained_models/do_kmeans_centers.npy')
 
 def geocode_address(address, api_key):
     url = f"https://maps.googleapis.com/maps/api/geocode/json?address={address}&key={api_key}"
